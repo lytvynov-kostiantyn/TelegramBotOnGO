@@ -9,6 +9,6 @@ var (
 	TeleToken = os.Getenv("TELE_TOKEN")
 )
 
-func init() {
+func FirstFunc() {
 	fmt.Println(TeleToken)
 }
