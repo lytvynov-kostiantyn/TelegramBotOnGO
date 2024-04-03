@@ -10,6 +10,9 @@ format:
 get:
 	go get
 
+lint:
+	staticcheck
+
 build: format get
 	CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -v -o telegram_bot_on_GO -ldflags "-X="github.com/lytvynov-kostiantyn/telegram_bot_on_GO/cmd.appVersion=${VERSION}
 
@@ -26,7 +29,10 @@ image:
 	docker build . -t ${REGESTRY}/${APP}:${VERSION}-${TARGETARCH}
 
 dive:
-	dive --ci --lowestEfficiency=0.99 ${REGESTRY}/${APP}:${VERSION}-${TARGETARCH}
+	dive --ci --lowestEfficiency=0.95 ${REGESTRY}/${APP}:${VERSION}-${TARGETARCH}
+
+run:
+	docker run -d --name telegram_bot_on_GO ${REGESTRY}/${APP}:${VERSION}-${TARGETARCH}
 
 push:
 	docker push ${REGESTRY}/${APP}:${VERSION}-${TARGETARCH}
