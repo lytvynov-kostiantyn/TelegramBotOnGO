@@ -1,4 +1,5 @@
 build/
+telegram_bot_on_go
 
 # Created by https://www.toptal.com/developers/gitignore/api/go,goland,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=go,goland,windows

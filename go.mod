@@ -1,6 +1,6 @@
-module github.com/lytvynov-kostiantyn/telegram_bot_on_GO
+module github.com/lytvynov-kostiantyn/telegram_bot_on_go
 
-go 1.22
+go 1.20
 
 require (
 	github.com/spf13/cobra v1.8.0
