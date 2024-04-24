@@ -5,8 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: telegram_bot_on_go
-  tag: "v1.0.2-331b84f"
+  registry: "ghcr.io"
+  repository: "ghcr.io/lytvynov-kostiantyn"
+  tag: "v1.0.2-e0ccac7"
+  os: linux
   arch: amd64
 
 secret:
