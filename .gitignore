@@ -1,4 +1,5 @@
 build/
+test/
 telegram_bot_on_go
 scripts/kubectl-kubeplugin
 
