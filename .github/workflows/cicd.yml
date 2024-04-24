@@ -18,8 +18,13 @@ jobs:
             -   name: run_test
                 run: make format
 
-            -   name: build&push
-                run: make image push
+            -   name: build_image
+                run: make image
+
+            -   name: push_image
+                run: |
+                    docker login ghcr.io -u ${{ variables.USERNAME }} --password ${{ secrets.GHCR_TOKEN }}
+                    make push
 
     cd:
         name: cd
