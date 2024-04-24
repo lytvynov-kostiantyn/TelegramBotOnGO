@@ -23,7 +23,7 @@ jobs:
 
             -   name: push_image
                 run: |
-                    docker login ghcr.io -u ${{ variables.USERNAME }} --password ${{ secrets.GHCR_TOKEN }}
+                    docker login ghcr.io -u ${{ secrets.USERNAME }} --password ${{ secrets.GHCR_TOKEN }}
                     make push
 
     cd:
