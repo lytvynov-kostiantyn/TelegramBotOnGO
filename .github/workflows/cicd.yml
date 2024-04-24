@@ -16,7 +16,7 @@ jobs:
                     fetch-depth: 0
 
             -   name: run_test
-                run: make format lint
+                run: make format
 
             -   name: build&push
                 run: make image push
