@@ -3,7 +3,7 @@ replicaCount: 1
 image:
     registry: "ghcr.io"
     repository: "ghcr.io/lytvynov-kostiantyn"
-    tag: "v1.0.2-e0ccac7"
+    tag: "v1.0.2-e2407ec"
     os: linux
     arch: amd64
 
