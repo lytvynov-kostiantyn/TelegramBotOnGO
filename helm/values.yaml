@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   registry: "ghcr.io"
   repository: "lytvynov-kostiantyn/telegram_bot_on_go"
-  tag: "v1.0.2-0b25a80"
+  tag: "v1.0.2-36ada0a"
   os: linux
   arch: amd64
 secret:
