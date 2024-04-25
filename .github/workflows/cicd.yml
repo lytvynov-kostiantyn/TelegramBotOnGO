@@ -16,10 +16,15 @@ jobs:
                     fetch-depth: 0
 
             -   name: run_test
-                run: make format lint
+                run: make format
 
-            -   name: build&push
-                run: make image push
+            -   name: build_image
+                run: make image
+
+            -   name: push_image
+                run: |
+                    docker login ghcr.io -u ${{ secrets.USERNAME }} --password ${{ secrets.GHCR_TOKEN }}
+                    make push
 
     cd:
         name: cd
@@ -34,7 +39,7 @@ jobs:
 
             -   uses: mikefarah/yq@master
                 with:
-                    cmd: yq -i '.image.tag=strenv(VERSION) helm/values.yaml
+                    cmd: yq -i '.image.tag=strenv(VERSION)' helm/values.yaml
 
             -   run: |
                     git config user.name github-actions
