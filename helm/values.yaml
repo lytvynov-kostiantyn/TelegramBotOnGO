@@ -1,14 +1,11 @@
 replicaCount: 1
-
 image:
-    registry: "ghcr.io"
-    repository: "ghcr.io/lytvynov-kostiantyn"
-    tag: "v1.0.2-e2407ec"
-    os: linux
-    arch: amd64
-
+  registry: "ghcr.io"
+  repository: "ghcr.io/lytvynov-kostiantyn"
+  tag: "v1.0.2-61a14cd"
+  os: linux
+  arch: amd64
 secret:
-    name: telegram-bot-on-go
-    key: token
-    env: TELE_TOKEN
-
+  name: telegram-bot-on-go
+  key: token
+  env: TELE_TOKEN
