@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REPO = 'https://github.com/vit-um/kbot'
+        REPO = 'https://github.com/lytvynov-kostiantyn/telegram_bot_on_go'
         BRANCH = 'main'
     }
 
